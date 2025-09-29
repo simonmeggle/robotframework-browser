@@ -295,7 +295,7 @@ class Interaction(LibraryComponent):
 
         This keyword clicks an element matching ``selector`` by performing the following steps:
         - Find an element matches selector. If there is none, wait until a matching element is attached to the DOM.
-        - Wait for actionability checks on the matched element, unless ``force`` option is set.
+        - Wait for actionability checks on the matched element.
           If the element is detached during the checks, the whole action is retried.
         - Scroll the element into view if needed.
         - Use `Mouse Button` to click in the center of the element, or the specified position.
