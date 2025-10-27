@@ -225,11 +225,11 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - name: Download package for install testing
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: rfbrowser-wheel
       - name: Download package for install testing
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: demoapp-${{ matrix.os }}
           path: zip_results/demoapp
@@ -389,17 +389,17 @@ jobs:
         with:
           node-version: "22.x"
       - name: Download rfbrowser-wheel for BrowserBatteries tests
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: rfbrowser-wheel-bb-test
           path: rfbrowser-wheel
       - name: Download BrowserBatteries wheels
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: browser-batteries-wheels-bb-test-${{ matrix.os }}
           path: browser-batteries-wheels
       - name: Download demoapp wheels
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: demoapp--bb-test-${{ matrix.os }}
           path: demoapp
